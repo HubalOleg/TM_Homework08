@@ -10,10 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import oleg.hubal.com.tm_homework08.Models.Person;
-import oleg.hubal.com.tm_homework08.PersonAdapter.PersonAdapter;
 import oleg.hubal.com.tm_homework08.Support.Constants;
 
 public class MainActivity extends AppCompatActivity implements PersonManager {
@@ -50,17 +48,6 @@ public class MainActivity extends AppCompatActivity implements PersonManager {
         }
     }
 
-    private void setRecycleView() {
-        personRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_AM);
-        personRecyclerView.setHasFixedSize(true);
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        personRecyclerView.setLayoutManager(layoutManager);
-
-        personAdapter = new PersonAdapter(persons, this);
-        personRecyclerView.setAdapter(personAdapter);
-    }
-
     @Override
     public void addPerson() {
         Person person = new Person(firstName, phoneNumber);
@@ -73,6 +60,12 @@ public class MainActivity extends AppCompatActivity implements PersonManager {
     }
 
     @Override
+    public void delPerson(int position) {
+        persons.remove(position);
+        personAdapter.notifyItemRemoved(position);
+    }
+
+    @Override
     protected void onActivityResult(int requstCode, int resultCode, Intent data) {
         if(resultCode == RESULT_OK) {
             firstName = data.getStringExtra("firstName");
@@ -82,5 +75,16 @@ public class MainActivity extends AppCompatActivity implements PersonManager {
             phoneNumber = data.getStringExtra("phoneNumber");
             addPerson();
         }
+    }
+
+    private void setRecycleView() {
+        personRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_AM);
+        personRecyclerView.setHasFixedSize(true);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        personRecyclerView.setLayoutManager(layoutManager);
+
+        personAdapter = new PersonAdapter(persons, this);
+        personRecyclerView.setAdapter(personAdapter);
     }
 }

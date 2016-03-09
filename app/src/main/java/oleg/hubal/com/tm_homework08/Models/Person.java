@@ -8,11 +8,19 @@ public class Person {
     private String firstName, lastName;
     private String gender, phoneNumber;
     private String age;
+    private int id;
+    public static int sId = 0;
 
     public Person(String firstName, String phoneNumber) {
         setFirstName(firstName);
         setPhoneNumber(phoneNumber);
+        id = sId;
+        sId++;
     }
+
+    public int getId() {
+        return id;
+    };
 
     public void setAge(String age) {
         this.age = age;
