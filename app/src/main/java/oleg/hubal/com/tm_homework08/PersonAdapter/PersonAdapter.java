@@ -1,4 +1,4 @@
-package oleg.hubal.com.tm_homework08;
+package oleg.hubal.com.tm_homework08.PersonAdapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import oleg.hubal.com.tm_homework08.Models.Person;
+import oleg.hubal.com.tm_homework08.PersonManager;
+import oleg.hubal.com.tm_homework08.R;
 
 /**
  * Created by User on 09.03.2016.

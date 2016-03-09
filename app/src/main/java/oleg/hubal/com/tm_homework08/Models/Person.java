@@ -7,14 +7,14 @@ public class Person {
 
     private String firstName, lastName;
     private String gender, phoneNumber;
-    private short age;
+    private String age;
 
     public Person(String firstName, String phoneNumber) {
         setFirstName(firstName);
         setPhoneNumber(phoneNumber);
     }
 
-    public void setAge(short age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -34,7 +34,7 @@ public class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    public short getAge() {
+    public String getAge() {
         return age;
     }
 

@@ -1,10 +1,12 @@
-package oleg.hubal.com.tm_homework08;
+package oleg.hubal.com.tm_homework08.PersonAdapter;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import oleg.hubal.com.tm_homework08.R;
 
 
 /**

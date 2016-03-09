@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tv_padding">
+
+    <EditText
+        android:id="@+id/et_first_name_ANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/tv_padding"
+        android:textSize="@dimen/et_text_size"
+        android:maxLength="11"
+        android:hint="First name"/>
+    <EditText
+        android:id="@+id/et_last_name_ANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/tv_padding"
+        android:textSize="@dimen/et_text_size"
+        android:maxLength="11"
+        android:hint="Lat name"/>
+    <EditText
+        android:id="@+id/et_gender_ANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/tv_padding"
+        android:textSize="@dimen/et_text_size"
+        android:maxLength="6"
+        android:hint="Gender(Male/Female)"/>
+    <EditText
+        android:id="@+id/et_age_ANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/tv_padding"
+        android:textSize="@dimen/et_text_size"
+        android:maxLength="3"
+        android:hint="Age"/>
+    <EditText
+        android:id="@+id/et_phone_number_ANP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/tv_padding"
+        android:textSize="@dimen/et_text_size"
+        android:maxLength="13"
+        android:hint="Phone number"/>
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="@dimen/btn_padding"
+        android:text="@string/btn_create"
+        android:textSize="@dimen/btn_text_size"
+        android:layout_gravity="center" />
+
+</LinearLayout>
