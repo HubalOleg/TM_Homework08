@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -63,6 +64,18 @@ public class MainActivity extends AppCompatActivity implements PersonManager {
     public void delPerson(int position) {
         persons.remove(position);
         personAdapter.notifyItemRemoved(position);
+    }
+
+    @Override
+    public void showPerson(int position) {
+        Person person = persons.get(position);
+        Intent intent = new Intent(this, ShowPersonActivity.class);
+        intent.putExtra("firstName", person.getFirstName());
+        intent.putExtra("lastName", person.getLastName());
+        intent.putExtra("gender", person.getGender());
+        intent.putExtra("age", person.getAge());
+        intent.putExtra("phoneNumber", person.getPhoneNumber());
+        startActivity(intent);
     }
 
     @Override

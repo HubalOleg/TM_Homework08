@@ -27,7 +27,7 @@ public class PersonViewHolder extends RecyclerView.ViewHolder implements View.On
 
         this.personManager = personManager;
 
-        itemView.setOnClickListener(this);
+        personCard.setOnClickListener(this);
         delPerson.setOnClickListener(this);
     }
 
@@ -36,6 +36,9 @@ public class PersonViewHolder extends RecyclerView.ViewHolder implements View.On
         switch (v.getId()) {
             case R.id.btn_del_person:
                 personManager.delPerson(getAdapterPosition());
+                break;
+            case R.id.card_view_PC:
+                personManager.showPerson(getAdapterPosition());
                 break;
         }
     }
